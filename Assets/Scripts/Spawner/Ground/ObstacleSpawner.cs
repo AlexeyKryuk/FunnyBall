@@ -6,9 +6,14 @@ using UnityEngine;
 public class ObstacleSpawner : ObjectPool
 {
     [SerializeField] private Transform[] _spawnPoints;
-    [SerializeField] private SpawnObject[] _obstaclePrefabs;
+    [SerializeField] private Obstacle[] _obstaclePrefabs;
+    [SerializeField] private Transform _leftBorder;
+    [SerializeField] private Transform _rightBorder;
 
-    private SpawnObject _currentObstacle;
+    private Obstacle _currentObstacle;
+
+    public Transform LeftBorder => _leftBorder;
+    public Transform RightBorder => _rightBorder;
 
     private void Awake()
     {
@@ -19,11 +24,13 @@ public class ObstacleSpawner : ObjectPool
     {
         foreach (var spawnPoint in _spawnPoints)
         {
-            _currentObstacle = GetObject();
+            _currentObstacle = (Obstacle)GetObject();
 
             if (_currentObstacle != null)
             {
-                SetObject(_currentObstacle, spawnPoint);
+                _currentObstacle.gameObject.SetActive(true);
+                _currentObstacle.transform.position = spawnPoint.position - _currentObstacle.Anchor.localPosition;
+                _currentObstacle.Init(this);
             }
         }
     }
@@ -34,11 +41,5 @@ public class ObstacleSpawner : ObjectPool
         {
             obj.gameObject.SetActive(false);
         }
-    }
-
-    private void SetObject(SpawnObject obstacle, Transform spawnPoint)
-    {
-        obstacle.gameObject.SetActive(true);
-        obstacle.transform.position = spawnPoint.position - obstacle.Anchor.localPosition;
     }
 }

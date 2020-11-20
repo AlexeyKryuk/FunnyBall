@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 3780067651937038109}
   - component: {fileID: 1839893055632100186}
   - component: {fileID: 7545738363225064361}
-  - component: {fileID: 3000328273280541406}
   - component: {fileID: 6691079379359457543}
   m_Layer: 0
   m_Name: Fox
@@ -189,19 +188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.8
   _spriteRenderer: {fileID: 217033570952610264}
---- !u!114 &3000328273280541406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037395115046440104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa578c1ac71fc0a4bb0e7d169fffd916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 685161975995094593}
 --- !u!114 &6691079379359457543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +200,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _anchor: {fileID: 685161975995094593}

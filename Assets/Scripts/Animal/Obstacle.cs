@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D))]
-public class Obstacle : MonoBehaviour
+public class Obstacle : SpawnObject
 {
     private Collider2D _collider;
+
+    public event UnityAction<ObstacleSpawner> WasSpawned;
 
     private void Awake()
     {
@@ -22,5 +25,10 @@ public class Obstacle : MonoBehaviour
         {
             player.Kill();
         }
+    }
+
+    public void Init(ObstacleSpawner spawner)
+    {
+        WasSpawned?.Invoke(spawner);
     }
 }

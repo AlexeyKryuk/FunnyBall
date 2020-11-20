@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3062192311448950351}
   - component: {fileID: 3062192311448950344}
   - component: {fileID: 3062192311448950345}
-  - component: {fileID: 5417173387968273916}
   - component: {fileID: 7098585304572845541}
   m_Layer: 0
   m_Name: Wolf
@@ -159,19 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _spriteRenderer: {fileID: 3062192311448950349}
---- !u!114 &5417173387968273916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3062192311448950346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa578c1ac71fc0a4bb0e7d169fffd916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 2788282058267710866}
 --- !u!114 &7098585304572845541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _anchor: {fileID: 2788282058267710866}
 --- !u!1 &7805494328435621773
 GameObject:
   m_ObjectHideFlags: 0

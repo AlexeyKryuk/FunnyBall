@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private Button _continueButton;
+    [SerializeField] private GameObject _menuWindow;
 
     private bool _isMenuActive = false;
 
@@ -34,7 +35,7 @@ public class Menu : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(_isMenuActive);
+            _menuWindow.SetActive(_isMenuActive);
         }
 
         Time.timeScale = Convert.ToInt32(!_isMenuActive);

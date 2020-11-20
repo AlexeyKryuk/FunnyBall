@@ -3,21 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(GroundSpawnObject))]
 public class CoinSpawner : ObjectPool
 {
     [SerializeField] private SpawnObject[] _coinPrefab;
     [SerializeField] private float _distanceBetweenCoin;
-
-    private Transform _startPoint;
-    private GroundSpawnObject _ground;
+    [SerializeField] private Transform _startPoint;
 
     private void Awake()
     {
         Initialize(_coinPrefab, _container, Quaternion.identity);
-
-        _ground = GetComponent<GroundSpawnObject>();
-        _startPoint = _ground.LeftBorder;
     }
 
     private void OnEnable()

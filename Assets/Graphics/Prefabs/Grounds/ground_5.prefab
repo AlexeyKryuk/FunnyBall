@@ -759,9 +759,9 @@ GameObject:
   - component: {fileID: 5250739693928265513}
   - component: {fileID: 5341710594118845433}
   - component: {fileID: 5198378391421199681}
+  - component: {fileID: 350969220711303431}
   - component: {fileID: 2149707762115672750}
   - component: {fileID: -2850137465171099215}
-  - component: {fileID: 350969220711303431}
   - component: {fileID: 3123532776936800949}
   - component: {fileID: -8050320020138935633}
   m_Layer: 8
@@ -874,6 +874,27 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!50 &350969220711303431
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248550150723447269}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &2149707762115672750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,27 +944,6 @@ MonoBehaviour:
   _randomness: 100
   _snapping: 0
   _fadeOut: 0
---- !u!50 &350969220711303431
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5248550150723447269}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &3123532776936800949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,9 +962,11 @@ MonoBehaviour:
   - {fileID: 3892619683826563306}
   - {fileID: 2382823684165340463}
   _obstaclePrefabs:
-  - {fileID: 5417173387968273916, guid: fe88065b3311f8a4088cac8fc26c0b62, type: 3}
-  - {fileID: 3000328273280541406, guid: caa8cb567b97e9846b3010736344b999, type: 3}
-  - {fileID: 2116344516005509956, guid: a2f245193131a6444b2c9810b28fac4e, type: 3}
+  - {fileID: 6691079379359457543, guid: caa8cb567b97e9846b3010736344b999, type: 3}
+  - {fileID: 1444172926848148222, guid: a2f245193131a6444b2c9810b28fac4e, type: 3}
+  - {fileID: 7098585304572845541, guid: fe88065b3311f8a4088cac8fc26c0b62, type: 3}
+  _leftBorder: {fileID: 3310969685876521317}
+  _rightBorder: {fileID: 8018380801551166829}
 --- !u!114 &-8050320020138935633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,6 +984,7 @@ MonoBehaviour:
   _coinPrefab:
   - {fileID: 7219599755455734935, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
   _distanceBetweenCoin: 1
+  _startPoint: {fileID: 3310969685876521317}
 --- !u!1 &5274816314254669285
 GameObject:
   m_ObjectHideFlags: 0

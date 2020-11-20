@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GroundSpawner : ObjectPool
 {
-    [SerializeField] private Player _player;
     [SerializeField] private GroundSpawnObject[] _groundPrefabs;
     [SerializeField] private GroundSpawnObject _currentGround;
     [SerializeField] private float _distanceBetweenGrounds;

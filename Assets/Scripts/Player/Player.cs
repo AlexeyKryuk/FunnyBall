@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    private int _countOfCoins;
-
     public UnityAction<int> CoinPickedUp;
 
-    public int CountOfCoins => _countOfCoins;
+    public int Coins { get; private set; }
 
     public void Kill()
     {
@@ -20,7 +18,7 @@ public class Player : MonoBehaviour
     public void PickUpCoin(int count)
     {
         if (count > 0)
-            _countOfCoins += count;
+            Coins += count;
 
         CoinPickedUp?.Invoke(count);
     }

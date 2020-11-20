@@ -9,6 +9,7 @@ public class GroundSpawnObject : SpawnObject
     [SerializeField] private Transform _rightBorder;
 
     private bool _isUsed = false;
+
     public bool IsUsed => _isUsed;
     public Transform LeftBorder => _leftBorder;
     public Transform RightBorder => _rightBorder;

@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
-    public const float MinMoveDistance = 0.0001f;
+    public const float MinMoveDistance = float.Epsilon;
     public const float ShellRadius = 0.01f;
     public const int ExtraJumps = 2;
 
