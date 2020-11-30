@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3025338769660696270}
   - component: {fileID: 3168811701181673590}
   - component: {fileID: 8819199359282416733}
-  - component: {fileID: -7339768145478173561}
   - component: {fileID: 1962378358183982426}
   - component: {fileID: 3753234078878628095}
   - component: {fileID: 3382625488541058825}
+  - component: {fileID: 5495675177839120043}
   m_Layer: 8
   m_Name: ground_1
   m_TagString: Untagged
@@ -143,36 +143,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-7339768145478173561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3101608377982352594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7ed6cbaa1cf8b4598f5fe0b3d69426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 1914895917218921149}
-  _leftBorder: {fileID: 3870376688828395474}
-  _rightBorder: {fileID: 6274450531828727214}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1962378358183982426}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1962378358183982426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +202,36 @@ MonoBehaviour:
   - {fileID: 7219599755455734935, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
   _distanceBetweenCoin: 1
   _startPoint: {fileID: 3870376688828395474}
+--- !u!114 &5495675177839120043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101608377982352594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anchor: {fileID: 1914895917218921149}
+  _leftBorder: {fileID: 3870376688828395474}
+  _rightBorder: {fileID: 6274450531828727214}
+  CollidedIntoPlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1962378358183982426}
+        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
+        m_MethodName: Fall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3102345285436861591
 GameObject:
   m_ObjectHideFlags: 0

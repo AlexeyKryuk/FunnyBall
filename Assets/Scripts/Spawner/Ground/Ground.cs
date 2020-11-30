@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GroundSpawnObject : SpawnObject
+public class Ground : SpawnObject
 {
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private Transform _rightBorder;

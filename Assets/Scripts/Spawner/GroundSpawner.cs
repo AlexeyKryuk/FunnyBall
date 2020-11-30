@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class GroundSpawner : ObjectPool
 {
-    [SerializeField] private GroundSpawnObject[] _groundPrefabs;
-    [SerializeField] private GroundSpawnObject _currentGround;
+    [SerializeField] private Ground[] _groundPrefabs;
+    [SerializeField] private Ground _currentGround;
     [SerializeField] private float _distanceBetweenGrounds;
     [SerializeField] private float _deltaPositionY;
 
-    private GroundSpawnObject _nextGround;
+    private Ground _nextGround;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class GroundSpawner : ObjectPool
     {
         _currentGround.CollidedIntoPlayer.AddListener(PlaceObject);
 
-        foreach (GroundSpawnObject ground in Pool)
+        foreach (Ground ground in Pool)
         {
             ground.CollidedIntoPlayer.AddListener(PlaceObject);
         }
@@ -31,7 +31,7 @@ public class GroundSpawner : ObjectPool
     {
         _currentGround.CollidedIntoPlayer.RemoveListener(PlaceObject);
 
-        foreach (GroundSpawnObject ground in Pool)
+        foreach (Ground ground in Pool)
         {
             ground.CollidedIntoPlayer.RemoveListener(PlaceObject);
         }
@@ -39,7 +39,7 @@ public class GroundSpawner : ObjectPool
 
     private void PlaceObject()
     {
-        _nextGround = (GroundSpawnObject)GetObject();
+        _nextGround = (Ground)GetObject();
 
         if (_nextGround != null)
         {
@@ -48,7 +48,7 @@ public class GroundSpawner : ObjectPool
         }
     }
 
-    private void SetObject(GroundSpawnObject ground)
+    private void SetObject(Ground ground)
     {
         ground.gameObject.SetActive(true);
         Vector3 deltaPosition = new Vector3(_distanceBetweenGrounds, Random.Range(-_deltaPositionY, _deltaPositionY));

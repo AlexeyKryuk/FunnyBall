@@ -21,12 +21,12 @@ public class Walking : MonoBehaviour
 
     private void OnEnable()
     {
-        _obstacle.WasSpawned += SetBorders;
+        _obstacle.Spawned.AddListener(SetBorders);
     }
 
     private void OnDisable()
     {
-        _obstacle.WasSpawned -= SetBorders;
+        _obstacle.Spawned.RemoveListener(SetBorders);
     }
 
     private void Update()
@@ -51,10 +51,10 @@ public class Walking : MonoBehaviour
         }
     }
 
-    private void SetBorders(ObstacleSpawner spawner)
+    private void SetBorders(Transform leftBorder, Transform rightBorder)
     {
-        _leftPoint = spawner.LeftBorder;
-        _rightPoint = spawner.RightBorder;
+        _leftPoint = leftBorder;
+        _rightPoint = rightBorder;
         _targetPoint = _leftPoint;
     }
 

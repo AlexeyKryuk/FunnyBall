@@ -3,20 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Ground))]
 public class ObstacleSpawner : ObjectPool
 {
     [SerializeField] private Transform[] _spawnPoints;
     [SerializeField] private Obstacle[] _obstaclePrefabs;
-    [SerializeField] private Transform _leftBorder;
-    [SerializeField] private Transform _rightBorder;
 
     private Obstacle _currentObstacle;
-
-    public Transform LeftBorder => _leftBorder;
-    public Transform RightBorder => _rightBorder;
+    private Ground _ground;
 
     private void Awake()
     {
+        _ground = GetComponent<Ground>();
+
         Initialize(_obstaclePrefabs, _container, Quaternion.identity);
     }
 
@@ -30,7 +29,7 @@ public class ObstacleSpawner : ObjectPool
             {
                 _currentObstacle.gameObject.SetActive(true);
                 _currentObstacle.transform.position = spawnPoint.position - _currentObstacle.Anchor.localPosition;
-                _currentObstacle.Init(this);
+                _currentObstacle.Spawned?.Invoke(_ground.LeftBorder, _ground.RightBorder);
             }
         }
     }

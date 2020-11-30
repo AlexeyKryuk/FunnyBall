@@ -667,9 +667,9 @@ GameObject:
   - component: {fileID: 100385504}
   - component: {fileID: 100385502}
   - component: {fileID: 100385501}
+  - component: {fileID: 100385503}
   - component: {fileID: 100385505}
   - component: {fileID: 100385506}
-  - component: {fileID: 100385503}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -749,7 +749,7 @@ Transform:
   - {fileID: 7857882629634099966}
   - {fileID: 1671272436}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &100385505
 MonoBehaviour:
@@ -6587,15 +6587,15 @@ MonoBehaviour:
   _container: {fileID: 1843330012}
   _capacity: 1
   _groundPrefabs:
-  - {fileID: -7689176251598369187, guid: f3b46bc17244dca40a1a7ca707966337, type: 3}
-  - {fileID: -7339768145478173561, guid: ed73df1f2403dc34e97fe5d2ed571cf5, type: 3}
-  - {fileID: 9214444468469509107, guid: 9e69b30ff04b57d4daa204fe36148f14, type: 3}
-  - {fileID: 4095218789316338258, guid: 831be070a311fea45b72d3a5ae3f720f, type: 3}
-  - {fileID: -2751905064835593011, guid: 3c4fc0a2a4c304941a91c1c469f9a0c0, type: 3}
-  - {fileID: 2149707762115672750, guid: d436ee10ece9f304ebaf4fec73a3898e, type: 3}
-  - {fileID: -3055670494439613410, guid: b436a391e51f7864db06d13000c25bcb, type: 3}
-  - {fileID: 601585773469660811, guid: 5e3c3257135c9f441a429fe8b7fdaddc, type: 3}
-  _currentGround: {fileID: 1534195786183192564}
+  - {fileID: 7861789852961041019, guid: f3b46bc17244dca40a1a7ca707966337, type: 3}
+  - {fileID: 5495675177839120043, guid: ed73df1f2403dc34e97fe5d2ed571cf5, type: 3}
+  - {fileID: 2145285418513937936, guid: 9e69b30ff04b57d4daa204fe36148f14, type: 3}
+  - {fileID: 1749888808619186715, guid: 831be070a311fea45b72d3a5ae3f720f, type: 3}
+  - {fileID: 4082115194684248635, guid: 3c4fc0a2a4c304941a91c1c469f9a0c0, type: 3}
+  - {fileID: 860491811059848001, guid: d436ee10ece9f304ebaf4fec73a3898e, type: 3}
+  - {fileID: 2652927011513532868, guid: b436a391e51f7864db06d13000c25bcb, type: 3}
+  - {fileID: 8620144454593328346, guid: 5e3c3257135c9f441a429fe8b7fdaddc, type: 3}
+  _currentGround: {fileID: 4211679258664574243}
   _distanceBetweenGrounds: 6
   _deltaPositionY: 1
 --- !u!4 &659208162
@@ -8820,7 +8820,7 @@ Transform:
   - {fileID: 1126507886}
   - {fileID: 1864621585}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958106304
 GameObject:
@@ -16637,7 +16637,7 @@ Transform:
   m_Children:
   - {fileID: 4207810107705909554}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845961831
 GameObject:
@@ -17454,7 +17454,7 @@ Transform:
   m_LocalScale: {x: 1469.64, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941499946
 GameObject:
@@ -19039,36 +19039,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1534195786183192564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4211679258664574242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7ed6cbaa1cf8b4598f5fe0b3d69426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 7078962438230286569}
-  _leftBorder: {fileID: 5331193723309337999}
-  _rightBorder: {fileID: 9114014638763335791}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4541219586536084542}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2577863278612754518
 GameObject:
   m_ObjectHideFlags: 0
@@ -19263,9 +19233,9 @@ GameObject:
   - component: {fileID: 4207810107705909554}
   - component: {fileID: 4073220330996197854}
   - component: {fileID: 4217484290515222842}
-  - component: {fileID: 1534195786183192564}
-  - component: {fileID: 4541219586536084542}
   - component: {fileID: 2833043542771018224}
+  - component: {fileID: 4541219586536084542}
+  - component: {fileID: 4211679258664574243}
   m_Layer: 8
   m_Name: ground_0
   m_TagString: Untagged
@@ -19273,6 +19243,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4211679258664574243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4211679258664574242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anchor: {fileID: 7078962438230286569}
+  _leftBorder: {fileID: 5331193723309337999}
+  _rightBorder: {fileID: 9114014638763335791}
+  CollidedIntoPlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4541219586536084542}
+        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
+        m_MethodName: Fall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4212157835866893040
 GameObject:
   m_ObjectHideFlags: 0

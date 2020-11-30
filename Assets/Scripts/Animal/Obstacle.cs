@@ -8,7 +8,7 @@ public class Obstacle : SpawnObject
 {
     private Collider2D _collider;
 
-    public event UnityAction<ObstacleSpawner> WasSpawned;
+    public UnityEvent<Transform, Transform> Spawned;
 
     private void Awake()
     {
@@ -25,10 +25,5 @@ public class Obstacle : SpawnObject
         {
             player.Kill();
         }
-    }
-
-    public void Init(ObstacleSpawner spawner)
-    {
-        WasSpawned?.Invoke(spawner);
     }
 }
