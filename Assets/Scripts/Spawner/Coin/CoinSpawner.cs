@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinSpawner : ObjectPool
+public class CoinSpawner : ObjectPool<Coin>
 {
-    [SerializeField] private SpawnObject[] _coinPrefab;
+    [SerializeField] private Coin[] _coinPrefab;
     [SerializeField] private float _distanceBetweenCoin;
     [SerializeField] private Transform _startPoint;
 
     private void Awake()
     {
-        Initialize(_coinPrefab, _container, Quaternion.identity);
+        Initialize(_coinPrefab, Container, Quaternion.identity);
     }
 
     private void OnEnable()
@@ -32,7 +32,7 @@ public class CoinSpawner : ObjectPool
         Vector2 deltaPosition = _startPoint.position;
         for (int i = 1; i < Pool.Count + 1; i++)
         {
-            var coin = GetObject();
+            Coin coin = GetObject();
 
             coin.gameObject.SetActive(true);
             coin.transform.position = deltaPosition;

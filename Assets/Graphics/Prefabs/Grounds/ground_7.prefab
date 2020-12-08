@@ -850,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8142603548770042725
 Transform:
   m_ObjectHideFlags: 0
@@ -1012,8 +1012,6 @@ MonoBehaviour:
   - {fileID: 6691079379359457543, guid: caa8cb567b97e9846b3010736344b999, type: 3}
   - {fileID: 1444172926848148222, guid: a2f245193131a6444b2c9810b28fac4e, type: 3}
   - {fileID: 7098585304572845541, guid: fe88065b3311f8a4088cac8fc26c0b62, type: 3}
-  _leftBorder: {fileID: 8765085422552723152}
-  _rightBorder: {fileID: 8393008763280550316}
 --- !u!114 &1180746101506116881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,7 +1027,7 @@ MonoBehaviour:
   _container: {fileID: 8142603548770042725}
   _capacity: 3
   _coinPrefab:
-  - {fileID: 7219599755455734935, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
+  - {fileID: 5740332802046675265, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
   _distanceBetweenCoin: 1
   _startPoint: {fileID: 8765085422552723152}
 --- !u!114 &8620144454593328346

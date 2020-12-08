@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundSpawner : ObjectPool
+public class GroundSpawner : ObjectPool<Ground>
 {
     [SerializeField] private Ground[] _groundPrefabs;
     [SerializeField] private Ground _currentGround;
@@ -14,7 +14,7 @@ public class GroundSpawner : ObjectPool
 
     private void Awake()
     {
-        Initialize(_groundPrefabs, _container, Quaternion.identity);
+        Initialize(_groundPrefabs, Container, Quaternion.identity);
     }
 
     private void OnEnable()
@@ -39,7 +39,7 @@ public class GroundSpawner : ObjectPool
 
     private void PlaceObject()
     {
-        _nextGround = (Ground)GetObject();
+        _nextGround = GetObject();
 
         if (_nextGround != null)
         {

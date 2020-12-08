@@ -5,36 +5,31 @@ using System.Linq;
 
 namespace Assets.Scripts.Spawner
 {
-    public class ObjectPool : MonoBehaviour
+    public class ObjectPool<T> : MonoBehaviour where T : Component
     {
-        [SerializeField] protected Transform _container;
-        [SerializeField] private int _capacity;
+        [SerializeField] protected Transform Container;
+        [SerializeField] protected int Capacity;
 
-        private List<SpawnObject> _pool = new List<SpawnObject>();
+        protected List<T> Pool = new List<T>();
 
-        public List<SpawnObject> Pool => _pool;
-
-        protected void Initialize(SpawnObject[] prefabs, Transform container, Quaternion rotate)
+        protected void Initialize(T[] prefabs, Transform container, Quaternion rotate)
         {
             for (int i = 0; i < prefabs.Length; i++)
             {
-                for (int j = 0; j < _capacity; j++)
+                for (int j = 0; j < Capacity; j++)
                 {
-                    SpawnObject spawned = Instantiate(prefabs[i], container.position, rotate, container);
-                    spawned.gameObject.SetActive(false);
+                    T spawned = Instantiate(prefabs[i], container.position, rotate, container);
 
-                    _pool.Add(spawned);
+                    Pool.Add(spawned);
                 }
             }
         }
 
-        protected SpawnObject GetObject()
+        protected T GetObject()
         {
-            List<SpawnObject> freeObjects = _pool.Where<SpawnObject>(p => p.gameObject.activeSelf == false).ToList();
+            List<T> freeObjects = Pool.Where<T>(p => p.gameObject.activeSelf == false).ToList();
 
-            SpawnObject freeObject = freeObjects[Random.Range(0, freeObjects.Count)];
-
-            return freeObject;
+            return freeObjects[Random.Range(0, freeObjects.Count)];
         }
     }
 }

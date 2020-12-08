@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public UnityAction<int> CoinPickedUp;
+    public event UnityAction<int> CoinPickedUp;
 
     public int Coins { get; private set; }
 

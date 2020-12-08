@@ -10,7 +10,6 @@ public class Ground : SpawnObject
 
     private bool _isUsed = false;
 
-    public bool IsUsed => _isUsed;
     public Transform LeftBorder => _leftBorder;
     public Transform RightBorder => _rightBorder;
 

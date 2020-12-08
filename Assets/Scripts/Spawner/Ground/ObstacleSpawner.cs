@@ -2,34 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(Ground))]
-public class ObstacleSpawner : ObjectPool
+public class ObstacleSpawner : ObjectPool<Obstacle>
 {
     [SerializeField] private Transform[] _spawnPoints;
     [SerializeField] private Obstacle[] _obstaclePrefabs;
 
     private Obstacle _currentObstacle;
-    private Ground _ground;
 
     private void Awake()
     {
-        _ground = GetComponent<Ground>();
-
-        Initialize(_obstaclePrefabs, _container, Quaternion.identity);
+        Initialize(_obstaclePrefabs, Container, Quaternion.identity);
     }
 
     private void OnEnable()
     {
         foreach (var spawnPoint in _spawnPoints)
         {
-            _currentObstacle = (Obstacle)GetObject();
+            _currentObstacle = GetObject();
 
             if (_currentObstacle != null)
             {
                 _currentObstacle.gameObject.SetActive(true);
                 _currentObstacle.transform.position = spawnPoint.position - _currentObstacle.Anchor.localPosition;
-                _currentObstacle.Spawned?.Invoke(_ground.LeftBorder, _ground.RightBorder);
             }
         }
     }

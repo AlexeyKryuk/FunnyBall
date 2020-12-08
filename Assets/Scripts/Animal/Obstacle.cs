@@ -8,8 +8,6 @@ public class Obstacle : SpawnObject
 {
     private Collider2D _collider;
 
-    public UnityEvent<Transform, Transform> Spawned;
-
     private void Awake()
     {
         _collider = GetComponent<Collider2D>();
@@ -17,11 +15,7 @@ public class Obstacle : SpawnObject
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Obstacle obstacle))
-        {
-            Physics2D.IgnoreCollision(collision.collider, _collider, true);
-        }
-        else if (collision.gameObject.TryGetComponent(out Player player))
+        if (collision.gameObject.TryGetComponent(out Player player))
         {
             player.Kill();
         }

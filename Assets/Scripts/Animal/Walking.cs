@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Obstacle))]
 public class Walking : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
-    private Obstacle _obstacle;
+    private Ground _ground;
 
     private Transform _leftPoint;
     private Transform _rightPoint;
@@ -16,17 +15,14 @@ public class Walking : MonoBehaviour
 
     private void Awake()
     {
-        _obstacle = GetComponent<Obstacle>();
+        _ground = GetComponentInParent<Ground>();
     }
 
     private void OnEnable()
     {
-        _obstacle.Spawned.AddListener(SetBorders);
-    }
-
-    private void OnDisable()
-    {
-        _obstacle.Spawned.RemoveListener(SetBorders);
+        _leftPoint = _ground.LeftBorder;
+        _rightPoint = _ground.RightBorder;
+        _targetPoint = _leftPoint;
     }
 
     private void Update()
@@ -49,13 +45,6 @@ public class Walking : MonoBehaviour
 
             Move(_targetPoint.position);
         }
-    }
-
-    private void SetBorders(Transform leftBorder, Transform rightBorder)
-    {
-        _leftPoint = leftBorder;
-        _rightPoint = rightBorder;
-        _targetPoint = _leftPoint;
     }
 
     private void Move(Vector2 target)

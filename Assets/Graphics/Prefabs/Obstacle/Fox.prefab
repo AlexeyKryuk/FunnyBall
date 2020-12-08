@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 685161975995094593}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -45,13 +45,13 @@ GameObject:
   - component: {fileID: 1839893055632100186}
   - component: {fileID: 7545738363225064361}
   - component: {fileID: 6691079379359457543}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3534059292350232551
 Transform:
   m_ObjectHideFlags: 0
@@ -201,3 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anchor: {fileID: 685161975995094593}
+  Spawned:
+    m_PersistentCalls:
+      m_Calls: []
