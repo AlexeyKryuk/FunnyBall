@@ -1004,8 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6d73e40612c5d4a8bb91fb5ae82971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 8142603548770042725}
-  _capacity: 1
+  Container: {fileID: 8142603548770042725}
+  Capacity: 1
   _spawnPoints:
   - {fileID: 8914852436534331610}
   _obstaclePrefabs:
@@ -1024,8 +1024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07e22ce075a8854d99b594cdd228ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 8142603548770042725}
-  _capacity: 3
+  Container: {fileID: 8142603548770042725}
+  Capacity: 2
   _coinPrefab:
   - {fileID: 5740332802046675265, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
   _distanceBetweenCoin: 1

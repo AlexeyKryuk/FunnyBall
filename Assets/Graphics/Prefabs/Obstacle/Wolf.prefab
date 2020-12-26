@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: -6898781352384922298, guid: 1c4deaec306db6e4a828cde5945aa756, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.63, y: 0.31}
@@ -171,9 +171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anchor: {fileID: 2788282058267710866}
-  Spawned:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &7805494328435621773
 GameObject:
   m_ObjectHideFlags: 0

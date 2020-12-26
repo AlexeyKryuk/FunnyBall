@@ -1000,8 +1000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6d73e40612c5d4a8bb91fb5ae82971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 306461905669841158}
-  _capacity: 2
+  Container: {fileID: 306461905669841158}
+  Capacity: 1
   _spawnPoints:
   - {fileID: 5120370585251215733}
   - {fileID: 5347348807859268740}
@@ -1021,8 +1021,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07e22ce075a8854d99b594cdd228ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 306461905669841158}
-  _capacity: 5
+  Container: {fileID: 306461905669841158}
+  Capacity: 6
   _coinPrefab:
   - {fileID: 5740332802046675265, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
   _distanceBetweenCoin: 1

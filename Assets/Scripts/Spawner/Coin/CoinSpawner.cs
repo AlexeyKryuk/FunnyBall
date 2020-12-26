@@ -29,14 +29,16 @@ public class CoinSpawner : ObjectPool<Coin>
 
     private void SpawnCoins()
     {
-        Vector2 deltaPosition = _startPoint.position;
+        Vector2 deltaPosition = _startPoint.position + Vector3.right;
+        deltaPosition.y += Random.Range(0f, 1f);
+
         for (int i = 1; i < Pool.Count + 1; i++)
         {
             Coin coin = GetObject();
 
             coin.gameObject.SetActive(true);
             coin.transform.position = deltaPosition;
-            deltaPosition += new Vector2(_distanceBetweenCoin * i, 0);
+            deltaPosition.x += _distanceBetweenCoin;
         }
     }
 }

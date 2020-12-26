@@ -8,10 +8,8 @@ public class Walking : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private Ground _ground;
+    private Queue<Transform> _wayPoints = new Queue<Transform>();
 
-    private Transform _leftPoint;
-    private Transform _rightPoint;
-    private Transform _targetPoint;
 
     private void Awake()
     {
@@ -20,30 +18,19 @@ public class Walking : MonoBehaviour
 
     private void OnEnable()
     {
-        _leftPoint = _ground.LeftBorder;
-        _rightPoint = _ground.RightBorder;
-        _targetPoint = _leftPoint;
+        _wayPoints.Enqueue(_ground.RightBorder);
+        _wayPoints.Enqueue(_ground.LeftBorder);
+        _spriteRenderer.flipX = false;
     }
 
     private void Update()
     {
-        if (_targetPoint != null)
-        {
-            if (Vector2.Distance(transform.localPosition, _targetPoint.localPosition) <= 1.2f)
-            {
-                if (_targetPoint == _leftPoint)
-                {
-                    _targetPoint = _rightPoint;
-                    _spriteRenderer.flipX = false;
-                }
-                else
-                {
-                    _targetPoint = _leftPoint;
-                    _spriteRenderer.flipX = true;
-                }
-            }
+        Move(_wayPoints.Peek().position);
 
-            Move(_targetPoint.position);
+        if (Vector2.Distance(transform.position, _wayPoints.Peek().position) <= 1f)
+        {
+            _wayPoints.Enqueue(_wayPoints.Dequeue());
+            _spriteRenderer.flipX = !_spriteRenderer.flipX;
         }
     }
 

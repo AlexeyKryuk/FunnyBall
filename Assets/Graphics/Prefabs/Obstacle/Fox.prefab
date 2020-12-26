@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: -38095363493823292, guid: ed8239ea233692f4d8b05be65b7e739a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.82, y: 0.44}
@@ -201,6 +201,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anchor: {fileID: 685161975995094593}
-  Spawned:
-    m_PersistentCalls:
-      m_Calls: []
