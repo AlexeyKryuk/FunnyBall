@@ -6584,8 +6584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a312be07e5012454ead0ae6dc6c55244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 1843330012}
-  _capacity: 1
+  Container: {fileID: 1843330012}
+  Capacity: 1
   _groundPrefabs:
   - {fileID: 7861789852961041019, guid: f3b46bc17244dca40a1a7ca707966337, type: 3}
   - {fileID: 5495675177839120043, guid: ed73df1f2403dc34e97fe5d2ed571cf5, type: 3}

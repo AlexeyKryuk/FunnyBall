@@ -6,10 +6,10 @@ public class Walking : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Waypoints _waypoints;
 
     private Ground _ground;
-    private Queue<Transform> _wayPoints = new Queue<Transform>();
-
+    private Transform _targetPoint;
 
     private void Awake()
     {
@@ -18,18 +18,20 @@ public class Walking : MonoBehaviour
 
     private void OnEnable()
     {
-        _wayPoints.Enqueue(_ground.RightBorder);
-        _wayPoints.Enqueue(_ground.LeftBorder);
-        _spriteRenderer.flipX = false;
+        _waypoints.Add(_ground.LeftBorder);
+        _waypoints.Add(_ground.RightBorder);
+        _targetPoint = _waypoints.Next();
+
+        _spriteRenderer.flipX = true;
     }
 
     private void Update()
     {
-        Move(_wayPoints.Peek().position);
+        Move(_targetPoint.position);
 
-        if (Vector2.Distance(transform.position, _wayPoints.Peek().position) <= 1f)
+        if (Vector2.Distance(transform.position, _targetPoint.position) <= 1f)
         {
-            _wayPoints.Enqueue(_wayPoints.Dequeue());
+            _targetPoint = _waypoints.Next();
             _spriteRenderer.flipX = !_spriteRenderer.flipX;
         }
     }
