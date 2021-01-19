@@ -8,32 +8,14 @@ public class Walking : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Waypoints _waypoints;
 
-    private Ground _ground;
-    private Transform _targetPoint;
-
-    private void Awake()
-    {
-        _ground = GetComponentInParent<Ground>();
-    }
-
-    private void OnEnable()
-    {
-        _waypoints.Add(_ground.LeftBorder);
-        _waypoints.Add(_ground.RightBorder);
-        _targetPoint = _waypoints.Next();
-
-        _spriteRenderer.flipX = true;
-    }
-
     private void Update()
     {
-        Move(_targetPoint.position);
+        Move(_waypoints.Target.position);
 
-        if (Vector2.Distance(transform.position, _targetPoint.position) <= 1f)
-        {
-            _targetPoint = _waypoints.Next();
-            _spriteRenderer.flipX = !_spriteRenderer.flipX;
-        }
+        if (_waypoints.IsForward)
+            _spriteRenderer.flipX = true;
+        else
+            _spriteRenderer.flipX = false;
     }
 
     private void Move(Vector2 target)
