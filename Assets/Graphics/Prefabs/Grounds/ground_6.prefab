@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 616368673140823555}
   - component: {fileID: 2652927011513532868}
   m_Layer: 8
-  m_Name: ground_6
+  m_Name: Ground_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -982,6 +982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf638a45972b744eaae592b9027de88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ground: {fileID: 2652927011513532868}
   _delay: 5
   _duration: 7
   _strength: 0.2
@@ -1022,21 +1023,6 @@ MonoBehaviour:
   _anchor: {fileID: 8517514306978406457}
   _leftBorder: {fileID: 8720182187973461031}
   _rightBorder: {fileID: 6230996258750470350}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4330203174185098251}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &436044261959751317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.8
-  _spriteRenderer: {fileID: 5004745420582531702}
   _waypoints: {fileID: 1714602877619428779}
 --- !u!114 &1921944870420468393
 MonoBehaviour:
@@ -1285,6 +1270,7 @@ MonoBehaviour:
   _points:
   - {fileID: 8720182187973461031}
   - {fileID: 6230996258750470350}
+  _spriteRenderer: {fileID: 5004745420582531702}
 --- !u!1 &3576450302396819229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
-  _spriteRenderer: {fileID: 8615283333226598109}
   _waypoints: {fileID: 4008822509617749654}
 --- !u!114 &4572148250833257845
 MonoBehaviour:
@@ -1749,3 +1734,4 @@ MonoBehaviour:
   _points:
   - {fileID: 8720182187973461031}
   - {fileID: 6230996258750470350}
+  _spriteRenderer: {fileID: 8615283333226598109}

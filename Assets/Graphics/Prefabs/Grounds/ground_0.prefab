@@ -218,7 +218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.8
-  _spriteRenderer: {fileID: 6570940439959738696}
   _waypoints: {fileID: 688972463153313429}
 --- !u!114 &353770446074870167
 MonoBehaviour:
@@ -248,6 +247,7 @@ MonoBehaviour:
   _points:
   - {fileID: 5331193724303084582}
   - {fileID: 9114014639657009606}
+  _spriteRenderer: {fileID: 6570940439959738696}
 --- !u!1 &4211679259725446283
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: -4423792605320638186}
   - component: {fileID: 7861789852961041019}
   m_Layer: 8
-  m_Name: ground_0
+  m_Name: Ground_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,13 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf638a45972b744eaae592b9027de88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ground: {fileID: 7861789852961041019}
   _delay: 3
   _duration: 8
-  _strength: 0.2
-  _vibration: 5
-  _randomness: 100
-  _snapping: 0
-  _fadeOut: 0
 --- !u!114 &-4423792605320638186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,21 +441,6 @@ MonoBehaviour:
   _anchor: {fileID: 7078962437244387648}
   _leftBorder: {fileID: 5331193724303084582}
   _rightBorder: {fileID: 9114014639657009606}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4541219585248081303}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &4212157835970540790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1009,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
-  _spriteRenderer: {fileID: 4370525024826200878}
   _waypoints: {fileID: 8974171042867250021}
 --- !u!114 &8384316352743020678
 MonoBehaviour:
@@ -1058,6 +1038,7 @@ MonoBehaviour:
   _points:
   - {fileID: 5331193724303084582}
   - {fileID: 9114014639657009606}
+  _spriteRenderer: {fileID: 4370525024826200878}
 --- !u!1 &4409314381849820392
 GameObject:
   m_ObjectHideFlags: 0

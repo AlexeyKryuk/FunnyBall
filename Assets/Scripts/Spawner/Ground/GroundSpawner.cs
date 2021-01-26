@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Spawner;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,21 +18,21 @@ public class GroundSpawner : ObjectPool<Ground>
 
     private void OnEnable()
     {
-        _currentGround.CollidedIntoPlayer.AddListener(PlaceObject);
+        _currentGround.CollidedIntoPlayer += PlaceObject;
 
         foreach (Ground ground in Pool)
         {
-            ground.CollidedIntoPlayer.AddListener(PlaceObject);
+            ground.CollidedIntoPlayer += PlaceObject;
         }
     }
 
     private void OnDisable()
     {
-        _currentGround.CollidedIntoPlayer.RemoveListener(PlaceObject);
+        _currentGround.CollidedIntoPlayer -= PlaceObject;
 
         foreach (Ground ground in Pool)
         {
-            ground.CollidedIntoPlayer.RemoveListener(PlaceObject);
+            ground.CollidedIntoPlayer -= PlaceObject;
         }
     }
 

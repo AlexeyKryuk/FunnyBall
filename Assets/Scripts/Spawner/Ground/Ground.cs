@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Ground : SpawnObject
+public class Ground : MonoBehaviour
 {
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private Transform _rightBorder;
@@ -13,7 +13,7 @@ public class Ground : SpawnObject
     public Transform LeftBorder => _leftBorder;
     public Transform RightBorder => _rightBorder;
 
-    public UnityEvent CollidedIntoPlayer;
+    public event UnityAction CollidedIntoPlayer;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

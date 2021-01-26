@@ -158,7 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.8
-  _spriteRenderer: {fileID: 7628533360917132270}
   _waypoints: {fileID: 4279244170417495091}
 --- !u!114 &3892672965794386737
 MonoBehaviour:
@@ -188,6 +187,7 @@ MonoBehaviour:
   _points:
   - {fileID: 4522142247056213177}
   - {fileID: 3008100364275053206}
+  _spriteRenderer: {fileID: 7628533360917132270}
 --- !u!1 &1145217472554572055
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +436,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
-  _spriteRenderer: {fileID: 5316808507986309335}
   _waypoints: {fileID: 712845779056189596}
 --- !u!114 &87032103720188799
 MonoBehaviour:
@@ -466,6 +465,7 @@ MonoBehaviour:
   _points:
   - {fileID: 4522142247056213177}
   - {fileID: 3008100364275053206}
+  _spriteRenderer: {fileID: 5316808507986309335}
 --- !u!1 &6542324107012675859
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 8527337797855965524}
   - component: {fileID: 1749888808619186715}
   m_Layer: 8
-  m_Name: ground_3
+  m_Name: Ground_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -653,6 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf638a45972b744eaae592b9027de88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ground: {fileID: 1749888808619186715}
   _delay: 6
   _duration: 9
   _strength: 0.2
@@ -693,21 +694,6 @@ MonoBehaviour:
   _anchor: {fileID: 7902474331532365584}
   _leftBorder: {fileID: 4522142247056213177}
   _rightBorder: {fileID: 3008100364275053206}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -1388703391304054718}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &7457774160995784039
 GameObject:
   m_ObjectHideFlags: 0

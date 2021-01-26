@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Spawner;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +7,8 @@ public class CoinSpawner : ObjectPool<Coin>
     [SerializeField] private Coin[] _coinPrefab;
     [SerializeField] private float _distanceBetweenCoin;
     [SerializeField] private Transform _startPoint;
+
+    private ObjectPool<Coin> _objectPool;
 
     private void Awake()
     {

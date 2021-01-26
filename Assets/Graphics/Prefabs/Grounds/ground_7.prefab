@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 1180746101506116881}
   - component: {fileID: 8620144454593328346}
   m_Layer: 0
-  m_Name: ground_7
+  m_Name: Ground_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1015,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf638a45972b744eaae592b9027de88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ground: {fileID: 8620144454593328346}
   _delay: 4
   _duration: 6
   _strength: 0.2
@@ -1055,21 +1056,6 @@ MonoBehaviour:
   _anchor: {fileID: 8914852436534331610}
   _leftBorder: {fileID: 8765085422552723152}
   _rightBorder: {fileID: 8393008763280550316}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5574456367008465369}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &8928332248205742139
 GameObject:
   m_ObjectHideFlags: 0

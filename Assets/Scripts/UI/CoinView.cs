@@ -9,21 +9,21 @@ public class CoinView : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private TMP_Text _text;
 
-    private int _countOfCoins = 0;
+    private int _coins = 0;
 
     private void OnEnable()
     {
-        _player.CoinPickedUp += OnCoinPickedUp;
+        _player.CoinCollecting += OnCoinCollecting;
     }
 
     private void OnDisable()
     {
-        _player.CoinPickedUp -= OnCoinPickedUp;
+        _player.CoinCollecting -= OnCoinCollecting;
     }
 
-    private void OnCoinPickedUp(int value)
+    private void OnCoinCollecting(int value)
     {
-        _countOfCoins += value;
-        _text.text = _countOfCoins.ToString();
+        _coins += value;
+        _text.text = _coins.ToString();
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : SpawnObject
+public class Coin : MonoBehaviour
 {
     [SerializeField] private int _value = 1;
 

@@ -5,19 +5,27 @@ using UnityEngine;
 
 public class FallAnimation : MonoBehaviour
 {
+    [SerializeField] private Ground _ground;
     [SerializeField] private float _delay;
     [SerializeField] private float _duration;
-    [SerializeField] private float _strength;
-    [SerializeField] private int _vibration;
-    [SerializeField] private float _randomness;
-    [SerializeField] private bool _snapping;
-    [SerializeField] private bool _fadeOut;
+
+    private float _strength = 0.2f;
+    private int _vibration = 5;
+    private float _randomness = 100f;
+    private bool _snapping = false;
+    private bool _fadeOut = false;
 
     private Sequence _sequence;
 
     private void OnEnable()
     {
+        _ground.CollidedIntoPlayer += Fall;
         _sequence = null;
+    }
+
+    private void OnDisable()
+    {
+        _ground.CollidedIntoPlayer -= Fall;
     }
 
     public void Fall()

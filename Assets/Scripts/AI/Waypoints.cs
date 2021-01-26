@@ -1,20 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
     [SerializeField] private List<Transform> _points;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private int _currentIndex = 0;
 
     public Transform Target { get; private set; }
-    public bool IsForward { get; private set; }
+    public int Direction { get; private set; }
 
     private void OnEnable()
     {
         _currentIndex = 0;
         Target = _points[_currentIndex];
-        IsForward = true;
+
+        Direction = 1;
+        Render(Direction);
     }
 
     private void Update()
@@ -22,6 +26,7 @@ public class Waypoints : MonoBehaviour
         if (Vector2.Distance(transform.position, Target.position) <= 1f)
         {
             Target = Next();
+            Render(Direction);
         }
     }
 
@@ -32,21 +37,25 @@ public class Waypoints : MonoBehaviour
 
     private Transform Next()
     {
-        if (IsForward)
-            ++_currentIndex;
-        else
-            --_currentIndex;
-
+        _currentIndex += Direction;
 
         if (_currentIndex == _points.Count - 1)
         {
-            IsForward = false;
+            Direction = -1;
         }
         else if (_currentIndex == 0)
         {
-            IsForward = true;
+            Direction = 1;
         }
 
         return _points[_currentIndex];
+    }
+
+    private void Render(int direction)
+    {
+        if (direction == 1)
+            _spriteRenderer.flipX = true;
+        else if (direction == -1)
+            _spriteRenderer.flipX = false;
     }
 }

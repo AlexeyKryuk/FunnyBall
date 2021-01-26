@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 2952052814629894692}
   - component: {fileID: 4082115194684248635}
   m_Layer: 8
-  m_Name: ground_4
+  m_Name: Ground_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf638a45972b744eaae592b9027de88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ground: {fileID: 4082115194684248635}
   _delay: 5
   _duration: 7
   _strength: 0.2
@@ -550,21 +551,6 @@ MonoBehaviour:
   _anchor: {fileID: 7135830768811202439}
   _leftBorder: {fileID: 5432504673680974738}
   _rightBorder: {fileID: 170119093762492013}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1162537395220765961}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &3772948355993276263
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +709,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.8
-  _spriteRenderer: {fileID: 6266446596532142615}
   _waypoints: {fileID: 309042690237590986}
 --- !u!114 &661624691779134152
 MonoBehaviour:
@@ -753,6 +738,7 @@ MonoBehaviour:
   _points:
   - {fileID: 5432504673680974738}
   - {fileID: 170119093762492013}
+  _spriteRenderer: {fileID: 6266446596532142615}
 --- !u!1 &4952087085096997509
 GameObject:
   m_ObjectHideFlags: 0

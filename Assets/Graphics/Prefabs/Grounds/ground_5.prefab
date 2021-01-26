@@ -404,7 +404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
-  _spriteRenderer: {fileID: 3200169369477060543}
   _waypoints: {fileID: 7801599360219711476}
 --- !u!114 &7247808034418957335
 MonoBehaviour:
@@ -434,6 +433,7 @@ MonoBehaviour:
   _points:
   - {fileID: 3310969685876521317}
   - {fileID: 8018380801551166829}
+  _spriteRenderer: {fileID: 3200169369477060543}
 --- !u!1 &5246700674579841339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: -8050320020138935633}
   - component: {fileID: 860491811059848001}
   m_Layer: 8
-  m_Name: ground_5
+  m_Name: Ground_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1250,6 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf638a45972b744eaae592b9027de88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ground: {fileID: 860491811059848001}
   _delay: 8
   _duration: 10
   _strength: 0.2
@@ -1290,21 +1291,6 @@ MonoBehaviour:
   _anchor: {fileID: 1230742335390782613}
   _leftBorder: {fileID: 3310969685876521317}
   _rightBorder: {fileID: 8018380801551166829}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -2850137465171099215}
-        m_TargetAssemblyTypeName: FallAnimation, Assembly-CSharp
-        m_MethodName: Fall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &5279037081601842593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,7 +1509,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.8
-  _spriteRenderer: {fileID: 3828789563702520089}
   _waypoints: {fileID: 7466269547943544516}
 --- !u!114 &7708724461757286854
 MonoBehaviour:
@@ -1553,6 +1538,7 @@ MonoBehaviour:
   _points:
   - {fileID: 3310969685876521317}
   - {fileID: 8018380801551166829}
+  _spriteRenderer: {fileID: 3828789563702520089}
 --- !u!1 &7657510267053932159
 GameObject:
   m_ObjectHideFlags: 0

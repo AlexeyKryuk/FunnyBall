@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D))]
-public class Obstacle : SpawnObject
+public class Obstacle : MonoBehaviour
 {
     private Collider2D _collider;
 
