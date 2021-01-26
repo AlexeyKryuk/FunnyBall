@@ -8,8 +8,6 @@ public class CoinSpawner : ObjectPool<Coin>
     [SerializeField] private float _distanceBetweenCoin;
     [SerializeField] private Transform _startPoint;
 
-    private ObjectPool<Coin> _objectPool;
-
     private void Awake()
     {
         Initialize(_coinPrefab, Container, Quaternion.identity);

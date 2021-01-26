@@ -17,6 +17,7 @@ public class ObjectPool<T> : MonoBehaviour where T : Component
             for (int j = 0; j < Capacity; j++)
             {
                 T spawned = Instantiate(prefabs[i], container.position, rotate, container);
+                spawned.gameObject.SetActive(false);
 
                 Pool.Add(spawned);
             }
