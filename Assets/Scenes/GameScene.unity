@@ -19236,7 +19236,7 @@ GameObject:
   - component: {fileID: 2833043542771018224}
   - component: {fileID: 4211679258664574243}
   m_Layer: 8
-  m_Name: ground_0
+  m_Name: Ground_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19254,12 +19254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 7078962438230286569}
   _leftBorder: {fileID: 5331193723309337999}
   _rightBorder: {fileID: 9114014638763335791}
-  CollidedIntoPlayer:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4212157835866893040
 GameObject:
   m_ObjectHideFlags: 0
