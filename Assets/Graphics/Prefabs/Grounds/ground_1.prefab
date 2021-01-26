@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 8237253927228083400}
 --- !u!114 &3057566233741833356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,11 +347,6 @@ MonoBehaviour:
   _ground: {fileID: 5495675177839120043}
   _delay: 4
   _duration: 9
-  _strength: 0.2
-  _vibration: 5
-  _randomness: 100
-  _snapping: 0
-  _fadeOut: 0
 --- !u!114 &3382625488541058825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 1914895917218921149}
   _leftBorder: {fileID: 3870376688828395474}
   _rightBorder: {fileID: 6274450531828727214}
 --- !u!1 &3102345285436861591
@@ -967,7 +960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 2414171241404057490}
 --- !u!114 &7882332639765287942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,7 +1136,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5040293757460038905}
   - component: {fileID: 4257609382896299618}
-  - component: {fileID: 3151773571112614002}
   - component: {fileID: 5588509491955295558}
   - component: {fileID: 2515584623119835592}
   m_Layer: 9
@@ -1220,19 +1211,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3151773571112614002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7763136668359671872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa578c1ac71fc0a4bb0e7d169fffd916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 8732622210550253056}
 --- !u!68 &5588509491955295558
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1289,7 +1267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 8732622210550253056}
 --- !u!1 &7791923531016936848
 GameObject:
   m_ObjectHideFlags: 0

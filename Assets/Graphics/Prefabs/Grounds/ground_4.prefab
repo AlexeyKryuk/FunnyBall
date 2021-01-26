@@ -513,11 +513,6 @@ MonoBehaviour:
   _ground: {fileID: 4082115194684248635}
   _delay: 5
   _duration: 7
-  _strength: 0.2
-  _vibration: 5
-  _randomness: 100
-  _snapping: 0
-  _fadeOut: 0
 --- !u!114 &2952052814629894692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 7135830768811202439}
   _leftBorder: {fileID: 5432504673680974738}
   _rightBorder: {fileID: 170119093762492013}
 --- !u!1 &3772948355993276263
@@ -722,7 +716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 6663007717788800398}
 --- !u!114 &309042690237590986
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -985,11 +985,6 @@ MonoBehaviour:
   _ground: {fileID: 2652927011513532868}
   _delay: 5
   _duration: 7
-  _strength: 0.2
-  _vibration: 5
-  _randomness: 100
-  _snapping: 0
-  _fadeOut: 0
 --- !u!114 &616368673140823555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 8517514306978406457}
   _leftBorder: {fileID: 8720182187973461031}
   _rightBorder: {fileID: 6230996258750470350}
 --- !u!1 &436044261959751317
@@ -1254,7 +1248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 5761595670727779823}
 --- !u!114 &1714602877619428779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,7 +1334,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8932252417132425321}
   - component: {fileID: 365096569498524402}
-  - component: {fileID: 1565666167269002466}
   - component: {fileID: 8325286053186359766}
   - component: {fileID: 2084641794166166872}
   m_Layer: 9
@@ -1417,19 +1409,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1565666167269002466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6177592762136294608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa578c1ac71fc0a4bb0e7d169fffd916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 5131717542087488144}
 --- !u!68 &8325286053186359766
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1486,7 +1465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 5131717542087488144}
 --- !u!1 &6285853535461778148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 8881453500881177858}
 --- !u!114 &4008822509617749654
 MonoBehaviour:
   m_ObjectHideFlags: 0

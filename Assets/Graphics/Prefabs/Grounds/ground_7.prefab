@@ -1018,11 +1018,6 @@ MonoBehaviour:
   _ground: {fileID: 8620144454593328346}
   _delay: 4
   _duration: 6
-  _strength: 0.2
-  _vibration: 5
-  _randomness: 100
-  _snapping: 0
-  _fadeOut: 0
 --- !u!114 &1180746101506116881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,7 +1048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 8914852436534331610}
   _leftBorder: {fileID: 8765085422552723152}
   _rightBorder: {fileID: 8393008763280550316}
 --- !u!1 &8928332248205742139
@@ -1066,7 +1060,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6172540890965529730}
   - component: {fileID: 3120410041102106137}
-  - component: {fileID: 4316317709025749001}
   - component: {fileID: 6761489143339971901}
   - component: {fileID: 3653223769497579955}
   m_Layer: 9
@@ -1142,19 +1135,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4316317709025749001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8928332248205742139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa578c1ac71fc0a4bb0e7d169fffd916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 7596302537986954875}
 --- !u!68 &6761489143339971901
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1211,4 +1191,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 7596302537986954875}

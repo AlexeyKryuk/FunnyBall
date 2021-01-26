@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3743223305782554675}
   - component: {fileID: 5554680625887238824}
-  - component: {fileID: 6754687959716727992}
   - component: {fileID: 4291506524947435916}
   - component: {fileID: 6118429637230564610}
   m_Layer: 9
@@ -116,19 +115,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6754687959716727992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142607447700075658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa578c1ac71fc0a4bb0e7d169fffd916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anchor: {fileID: 1094550727691301578}
 --- !u!68 &4291506524947435916
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 1094550727691301578}
 --- !u!1 &2274116381359910492
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,11 +425,6 @@ MonoBehaviour:
   _ground: {fileID: 2145285418513937936}
   _delay: 4
   _duration: 9
-  _strength: 0.2
-  _vibration: 5
-  _randomness: 100
-  _snapping: 0
-  _fadeOut: 0
 --- !u!114 &2491066756805757574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,7 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 6644110772389504400}
   _leftBorder: {fileID: 5588602689359367178}
   _rightBorder: {fileID: 8220244857429516074}
 --- !u!1 &4494258198125962074
@@ -1365,7 +1344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 4029284206390464318}
 --- !u!114 &8058301087046236026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,7 +1531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a848afe2a8c61a4bb346338e314e6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anchor: {fileID: 8855886117760282238}
 --- !u!114 &3892550107167276522
 MonoBehaviour:
   m_ObjectHideFlags: 0
