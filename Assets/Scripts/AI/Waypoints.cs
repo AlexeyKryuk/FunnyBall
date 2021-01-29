@@ -2,18 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Obstacle))]
 public class Waypoints : MonoBehaviour
 {
     [SerializeField] private List<Transform> _points;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
+    private Obstacle _obstacle;
     private int _currentIndex = 0;
 
     public Transform Target { get; private set; }
     public int Direction { get; private set; }
 
+    private void Awake()
+    {
+        _obstacle = GetComponent<Obstacle>();
+    }
+
     private void OnEnable()
     {
+        if (_obstacle.Ground != null)
+        {
+            _points.Add(_obstacle.Ground.RightBorder);
+            _points.Add(_obstacle.Ground.LeftBorder);
+        }
+
         _currentIndex = 0;
         Target = _points[_currentIndex];
 
@@ -54,8 +67,8 @@ public class Waypoints : MonoBehaviour
     private void Render(int direction)
     {
         if (direction == 1)
-            _spriteRenderer.flipX = true;
-        else if (direction == -1)
             _spriteRenderer.flipX = false;
+        else if (direction == -1)
+            _spriteRenderer.flipX = true;
     }
 }

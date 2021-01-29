@@ -2,48 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundSpawner : ObjectPool<Ground>
+[RequireComponent(typeof(ObjectPooling))]
+public class GroundSpawner : MonoBehaviour
 {
-    [SerializeField] private Ground[] _groundPrefabs;
-    [SerializeField] private Ground _currentGround;
+    [SerializeField] private int _capacity;
+    [SerializeField] private Ground[] _template;
+    [SerializeField] private Ground _current;
     [SerializeField] private float _distanceBetweenGrounds;
     [SerializeField] private float _deltaPositionY;
 
-    private Ground _nextGround;
+    private ObjectPooling _objectPool;
 
     private void Awake()
     {
-        Initialize(_groundPrefabs, Container, Quaternion.identity);
+        _objectPool = GetComponent<ObjectPooling>();
+        _objectPool.Initialize(_template, _capacity, transform, Quaternion.identity);
     }
 
     private void OnEnable()
     {
-        _currentGround.CollidedIntoPlayer += PlaceObject;
+        _current.CollidedIntoPlayer += PlaceObject;
 
-        foreach (Ground ground in Pool)
+        foreach (var obj in _objectPool.Pool)
         {
-            ground.CollidedIntoPlayer += PlaceObject;
+            obj.GetComponent<Ground>().CollidedIntoPlayer += PlaceObject;
         }
     }
 
     private void OnDisable()
     {
-        _currentGround.CollidedIntoPlayer -= PlaceObject;
+        _current.CollidedIntoPlayer -= PlaceObject;
 
-        foreach (Ground ground in Pool)
+        foreach (var obj in _objectPool.Pool)
         {
-            ground.CollidedIntoPlayer -= PlaceObject;
+            obj.GetComponent<Ground>().CollidedIntoPlayer -= PlaceObject;
         }
     }
 
     private void PlaceObject()
     {
-        _nextGround = GetObject();
+        Ground ground = _objectPool.GetObject() as Ground;
 
-        if (_nextGround != null)
+        if (ground != null)
         {
-            SetObject(_nextGround);
-            _currentGround = _nextGround;
+            SetObject(ground);
+            _current = ground;
         }
     }
 
@@ -51,6 +54,6 @@ public class GroundSpawner : ObjectPool<Ground>
     {
         ground.gameObject.SetActive(true);
         Vector3 deltaPosition = new Vector3(_distanceBetweenGrounds, Random.Range(-_deltaPositionY, _deltaPositionY));
-        ground.transform.position = _currentGround.RightBorder.position - ground.LeftBorder.localPosition + deltaPosition;
+        ground.transform.position = _current.RightBorder.position - ground.LeftBorder.localPosition + deltaPosition;
     }
 }

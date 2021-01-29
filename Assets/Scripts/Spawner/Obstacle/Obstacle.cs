@@ -7,6 +7,8 @@ using UnityEngine.Events;
 public class Obstacle : MonoBehaviour
 {
     private Collider2D _collider;
+    
+    public Ground Ground { get; private set; }
 
     private void Awake()
     {
@@ -19,5 +21,10 @@ public class Obstacle : MonoBehaviour
         {
             player.Kill();
         }
+    }
+
+    public void Init(Ground ground)
+    {
+        Ground = ground;
     }
 }

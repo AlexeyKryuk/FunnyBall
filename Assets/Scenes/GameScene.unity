@@ -6565,6 +6565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659208162}
   - component: {fileID: 659208161}
+  - component: {fileID: 659208163}
   m_Layer: 0
   m_Name: GroundSpawner
   m_TagString: Untagged
@@ -6584,9 +6585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a312be07e5012454ead0ae6dc6c55244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Container: {fileID: 1843330012}
-  Capacity: 1
-  _groundPrefabs:
+  _capacity: 1
+  _template:
   - {fileID: 7861789852961041019, guid: f3b46bc17244dca40a1a7ca707966337, type: 3}
   - {fileID: 5495675177839120043, guid: ed73df1f2403dc34e97fe5d2ed571cf5, type: 3}
   - {fileID: 2145285418513937936, guid: 9e69b30ff04b57d4daa204fe36148f14, type: 3}
@@ -6595,7 +6595,7 @@ MonoBehaviour:
   - {fileID: 860491811059848001, guid: d436ee10ece9f304ebaf4fec73a3898e, type: 3}
   - {fileID: 2652927011513532868, guid: b436a391e51f7864db06d13000c25bcb, type: 3}
   - {fileID: 8620144454593328346, guid: 5e3c3257135c9f441a429fe8b7fdaddc, type: 3}
-  _currentGround: {fileID: 4211679258664574243}
+  _current: {fileID: 4211679258664574243}
   _distanceBetweenGrounds: 6
   _deltaPositionY: 1
 --- !u!4 &659208162
@@ -6612,6 +6612,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &659208163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659208160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8fef871185bfa40b0d53ca83f398b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &687586973
 GameObject:
   m_ObjectHideFlags: 0

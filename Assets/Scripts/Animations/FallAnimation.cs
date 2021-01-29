@@ -37,7 +37,7 @@ public class FallAnimation : MonoBehaviour
             _sequence.Append(transform.DOShakePosition(_duration, Vector3.left * _strength,
                 _vibration, _randomness, _snapping, _fadeOut).SetDelay(_delay));
             _sequence.Append(transform.DOMove(transform.position + Vector3.down * 15f, 1f));
-            _sequence.AppendCallback(() => gameObject.SetActive(false));
+            _sequence.AppendCallback(() => _ground.ReturnToPool());
         }
     }
 }

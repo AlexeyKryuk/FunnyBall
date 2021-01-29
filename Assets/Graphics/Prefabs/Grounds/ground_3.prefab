@@ -505,10 +505,11 @@ GameObject:
   - component: {fileID: 7453236839703523543}
   - component: {fileID: 7317997198445599425}
   - component: {fileID: 7461804796072365079}
+  - component: {fileID: 1749888808619186715}
   - component: {fileID: -4857015209055709221}
   - component: {fileID: -1388703391304054718}
   - component: {fileID: 8527337797855965524}
-  - component: {fileID: 1749888808619186715}
+  - component: {fileID: 1733475077342897284}
   m_Layer: 8
   m_Name: Ground_3
   m_TagString: Untagged
@@ -618,6 +619,20 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1749888808619186715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456667477245230447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leftBorder: {fileID: 4522142247056213177}
+  _rightBorder: {fileID: 3008100364275053206}
 --- !u!50 &-4857015209055709221
 Rigidbody2D:
   serializedVersion: 4
@@ -666,13 +681,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07e22ce075a8854d99b594cdd228ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Container: {fileID: 7453236839703523543}
-  Capacity: 4
-  _coinPrefab:
-  - {fileID: 5740332802046675265, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
+  _amount: 3
+  _template: {fileID: 5740332802046675265, guid: 9a08eaa1b823df948a5ad9e9b4d5318f, type: 3}
   _distanceBetweenCoin: 1
   _startPoint: {fileID: 4522142247056213177}
---- !u!114 &1749888808619186715
+--- !u!114 &1733475077342897284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -681,11 +694,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7456667477245230447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21f7ad3631d42b489fc3075b9e2a829, type: 3}
+  m_Script: {fileID: 11500000, guid: 6807cb106ee990d4989d0ae81490f66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftBorder: {fileID: 4522142247056213177}
-  _rightBorder: {fileID: 3008100364275053206}
+  _amount: 2
+  _templates:
+  - {fileID: 6691079379359457543, guid: caa8cb567b97e9846b3010736344b999, type: 3}
+  - {fileID: 1444172926848148222, guid: a2f245193131a6444b2c9810b28fac4e, type: 3}
+  - {fileID: 7098585304572845541, guid: fe88065b3311f8a4088cac8fc26c0b62, type: 3}
+  _distanceBetweenObstacle: 4
+  _startPoint: {fileID: 4522142247056213177}
 --- !u!1 &7457774160995784039
 GameObject:
   m_ObjectHideFlags: 0

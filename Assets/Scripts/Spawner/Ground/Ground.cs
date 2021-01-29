@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Ground : MonoBehaviour
+public class Ground : PoolObject
 {
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private Transform _rightBorder;
