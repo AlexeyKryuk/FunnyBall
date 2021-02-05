@@ -2,58 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(ObjectPooling))]
+[RequireComponent(typeof(ObjectPool))]
 public class GroundSpawner : MonoBehaviour
 {
     [SerializeField] private int _capacity;
-    [SerializeField] private Ground[] _template;
-    [SerializeField] private Ground _current;
+    [SerializeField] private Ground[] _templates;
+    [SerializeField] private Ground _currentGround;
     [SerializeField] private float _distanceBetweenGrounds;
     [SerializeField] private float _deltaPositionY;
 
-    private ObjectPooling _objectPool;
+    private ObjectPool _objectPool;
 
     private void Awake()
     {
-        _objectPool = GetComponent<ObjectPooling>();
-        _objectPool.Initialize(_template, _capacity, transform, Quaternion.identity);
+        _objectPool = GetComponent<ObjectPool>();
+        _objectPool.Initialize(_templates, _capacity, transform);
     }
 
     private void OnEnable()
     {
-        _current.CollidedIntoPlayer += PlaceObject;
+        _currentGround.CollidedIntoPlayer += PlaceGround;
 
         foreach (var obj in _objectPool.Pool)
         {
-            obj.GetComponent<Ground>().CollidedIntoPlayer += PlaceObject;
+            obj.GetComponent<Ground>().CollidedIntoPlayer += PlaceGround;
         }
     }
 
     private void OnDisable()
     {
-        _current.CollidedIntoPlayer -= PlaceObject;
+        _currentGround.CollidedIntoPlayer -= PlaceGround;
 
         foreach (var obj in _objectPool.Pool)
         {
-            obj.GetComponent<Ground>().CollidedIntoPlayer -= PlaceObject;
+            obj.GetComponent<Ground>().CollidedIntoPlayer -= PlaceGround;
         }
     }
 
-    private void PlaceObject()
+    private void PlaceGround()
     {
-        Ground ground = _objectPool.GetObject() as Ground;
+        Ground nextGround = _objectPool.GetObject() as Ground;
 
-        if (ground != null)
+        if (nextGround != null)
         {
-            SetObject(ground);
-            _current = ground;
-        }
-    }
+            nextGround.gameObject.SetActive(true);
+            Vector3 deltaPosition = new Vector3(_distanceBetweenGrounds, Random.Range(-_deltaPositionY, _deltaPositionY));
+            nextGround.transform.position = _currentGround.RightBorder.position - nextGround.LeftBorder.localPosition + deltaPosition;
 
-    private void SetObject(Ground ground)
-    {
-        ground.gameObject.SetActive(true);
-        Vector3 deltaPosition = new Vector3(_distanceBetweenGrounds, Random.Range(-_deltaPositionY, _deltaPositionY));
-        ground.transform.position = _current.RightBorder.position - ground.LeftBorder.localPosition + deltaPosition;
+            _currentGround = nextGround;
+        }
     }
 }

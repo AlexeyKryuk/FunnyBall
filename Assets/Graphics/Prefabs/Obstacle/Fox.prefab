@@ -45,14 +45,15 @@ GameObject:
   - component: {fileID: 1839893055632100186}
   - component: {fileID: 6691079379359457543}
   - component: {fileID: 7545738363225064361}
-  - component: {fileID: -3333757016656253435}
+  - component: {fileID: -657915547497779365}
+  - component: {fileID: 1951409441221819223}
   m_Layer: 9
   m_Name: Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3534059292350232551
 Transform:
   m_ObjectHideFlags: 0
@@ -107,7 +108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -38095363493823292, guid: ed8239ea233692f4d8b05be65b7e739a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,8 +201,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.8
-  _waypoints: {fileID: -3333757016656253435}
---- !u!114 &-3333757016656253435
+  _waypoints: {fileID: 1951409441221819223}
+--- !u!114 &-657915547497779365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037395115046440104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dfa4f408e85ee4588e24f0f505455a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 217033570952610264}
+  _walking: {fileID: 7545738363225064361}
+--- !u!114 &1951409441221819223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,6 +228,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062c30a51b17f2b45ad73813ccf3250a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points:
-  - {fileID: 3534059292350232551}
-  _spriteRenderer: {fileID: 217033570952610264}
+  _obstacle: {fileID: 6691079379359457543}
+  _points: []

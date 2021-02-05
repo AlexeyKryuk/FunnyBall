@@ -18,17 +18,6 @@ public class ObstacleGenerator : MonoBehaviour
         Initialize();
     }
 
-    private void Initialize()
-    {
-        _obstacles = new Obstacle[_amount];
-
-        for (int i = 0; i < _amount; i++)
-        {
-            _obstacles[i] = Instantiate(_templates[Random.Range(0, _templates.Length)], transform);
-            _obstacles[i].Init(_ground);
-        }
-    }
-
     private void OnEnable()
     {
         Generate();
@@ -42,10 +31,25 @@ public class ObstacleGenerator : MonoBehaviour
         }
     }
 
+    private void Initialize()
+    {
+        _obstacles = new Obstacle[_amount];
+
+        for (int i = 0; i < _amount; i++)
+        {
+            _obstacles[i] = Instantiate(_templates[Random.Range(0, _templates.Length)], transform);
+
+            if (_obstacles[i].TryGetComponent<Waypoints>(out Waypoints waypoints))
+            {
+                waypoints.Init(_ground.LeftBorder, _ground.RightBorder);
+            }
+        }
+    }
+
     private void Generate()
     {
-        float surfaceLenght = _ground.GetComponent<Collider2D>().bounds.size.x - 4f;
-        float distanceBetweenObj = surfaceLenght / _amount;
+        float surfaceLenght = _ground.GetComponent<Collider2D>().bounds.size.x - 1f;
+        float distanceBetweenObstacle = surfaceLenght / _amount;
 
         Vector3 deltaPosition = _startPoint.position;
 
@@ -54,7 +58,7 @@ public class ObstacleGenerator : MonoBehaviour
             _obstacles[i].gameObject.SetActive(true);
             _obstacles[i].transform.position = deltaPosition;
 
-            deltaPosition.x += distanceBetweenObj;
+            deltaPosition.x += distanceBetweenObstacle;
         }
     }
 }

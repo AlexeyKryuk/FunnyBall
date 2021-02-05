@@ -4,26 +4,23 @@ using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 
-public class CoinView : MonoBehaviour
+public class CoinsView : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private TMP_Text _text;
 
-    private int _coins = 0;
-
     private void OnEnable()
     {
-        _player.CoinCollecting += OnCoinCollecting;
+        _player.CoinCollected += OnCoinCollected;
     }
 
     private void OnDisable()
     {
-        _player.CoinCollecting -= OnCoinCollecting;
+        _player.CoinCollected -= OnCoinCollected;
     }
 
-    private void OnCoinCollecting(int value)
+    private void OnCoinCollected(int count)
     {
-        _coins += value;
-        _text.text = _coins.ToString();
+        _text.text = count.ToString();
     }
 }

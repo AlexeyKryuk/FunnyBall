@@ -2,73 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Obstacle))]
 public class Waypoints : MonoBehaviour
 {
-    [SerializeField] private List<Transform> _points;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-
-    private Obstacle _obstacle;
-    private int _currentIndex = 0;
-
-    public Transform Target { get; private set; }
-    public int Direction { get; private set; }
-
-    private void Awake()
-    {
-        _obstacle = GetComponent<Obstacle>();
-    }
+    private List<Transform> _points = new List<Transform>();
+    private int _currentIndex;
 
     private void OnEnable()
     {
-        if (_obstacle.Ground != null)
-        {
-            _points.Add(_obstacle.Ground.RightBorder);
-            _points.Add(_obstacle.Ground.LeftBorder);
-        }
-
-        _currentIndex = 0;
-        Target = _points[_currentIndex];
-
-        Direction = 1;
-        Render(Direction);
+        _currentIndex = -1;
     }
 
-    private void Update()
+    public void Init(Transform point1, Transform point2)
     {
-        if (Vector2.Distance(transform.position, Target.position) <= 1f)
-        {
-            Target = Next();
-            Render(Direction);
-        }
+        _points.Add(point1);
+        _points.Add(point2);
     }
 
-    public void Add(Transform point)
+    public Transform GetNext()
     {
-        _points.Add(point);
+        if (_currentIndex >= _points.Count - 1)
+            _currentIndex = -1;
+
+        return _points[++_currentIndex];
     }
 
-    private Transform Next()
+    public Transform GetPrevious()
     {
-        _currentIndex += Direction;
+        if (_currentIndex <= 0)
+            _currentIndex = _points.Count;
 
-        if (_currentIndex == _points.Count - 1)
-        {
-            Direction = -1;
-        }
-        else if (_currentIndex == 0)
-        {
-            Direction = 1;
-        }
-
-        return _points[_currentIndex];
-    }
-
-    private void Render(int direction)
-    {
-        if (direction == 1)
-            _spriteRenderer.flipX = false;
-        else if (direction == -1)
-            _spriteRenderer.flipX = true;
+        return _points[--_currentIndex];
     }
 }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761264819340144283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.59, y: 1.204, z: 0}
+  m_LocalPosition: {x: 3.97, y: 1.204, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5250739693928265513}
@@ -738,7 +738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5250739693928265513
 Transform:
   m_ObjectHideFlags: 0
@@ -924,7 +924,6 @@ MonoBehaviour:
   - {fileID: 6691079379359457543, guid: caa8cb567b97e9846b3010736344b999, type: 3}
   - {fileID: 1444172926848148222, guid: a2f245193131a6444b2c9810b28fac4e, type: 3}
   - {fileID: 7098585304572845541, guid: fe88065b3311f8a4088cac8fc26c0b62, type: 3}
-  _distanceBetweenObstacle: 4
   _startPoint: {fileID: 3310969685876521317}
 --- !u!1 &5279037081601842593
 GameObject:
@@ -950,7 +949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5279037081601842593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.698, y: 1.059, z: 0}
+  m_LocalPosition: {x: -3.92, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5250739693928265513}

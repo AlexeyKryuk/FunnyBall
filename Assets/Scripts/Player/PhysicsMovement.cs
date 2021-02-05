@@ -35,7 +35,7 @@ public class PhysicsMovement : MonoBehaviour
         _contactFilter.useLayerMask = true;
     }
 
-    protected bool TryToJump()
+    public bool TryToJump()
     {
         if (_extraJumpsValue > 0)
         {
@@ -47,7 +47,7 @@ public class PhysicsMovement : MonoBehaviour
         return false;
     }
 
-    protected void Move(Vector2 targetVelocity)
+    public void Move(Vector2 targetVelocity)
     {
         _velocity += _gravityModifier * Physics2D.gravity * Time.fixedDeltaTime;
         _velocity.x = targetVelocity.x;
